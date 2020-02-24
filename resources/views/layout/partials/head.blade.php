@@ -19,14 +19,13 @@
 
     $(function () {
         var form = $(".form form");
-        form.ajaxForm({
-            success: function (res) {
-                alert('32222')
-            }, error: function (res) {
-                alert('312')
-            }
-        });
-
+        // form.ajaxForm({
+        //     success: function (res) {
+        //         alert('32222')
+        //     }, error: function (res) {
+        //         alert('312')
+        //     }
+        // });
     });
 
 </script>

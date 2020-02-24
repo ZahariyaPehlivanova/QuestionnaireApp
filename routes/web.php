@@ -24,5 +24,7 @@ Route::group(['namespace' => 'Auth'], function (\Illuminate\Routing\Router $rout
 });
 
 Route::group(['namespace' => 'Survey', 'middleware' => 'start.survey'], function (\Illuminate\Routing\Router $router) {
+    $router->get('/summary', ['as' => 'summary', 'uses' => 'SurveyController@summary']);
+    $router->post('/save-answers/{question_id}', ['as' => 'save-answers', 'uses' => 'SurveyController@saveAnswers']);
     $router->get('/survey', ['as' => 'survey', 'uses' => 'SurveyController@index']);
 });

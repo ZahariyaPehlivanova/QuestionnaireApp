@@ -12,4 +12,11 @@ use App\Models\Base\AbstractQuestion;
 
 class Question extends AbstractQuestion
 {
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function answers()
+    {
+        return $this->hasMany(Answer::class, 'question_id', 'id');
+    }
 }

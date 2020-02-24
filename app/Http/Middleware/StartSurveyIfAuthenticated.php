@@ -4,10 +4,8 @@ namespace App\Http\Middleware;
 
 use Closure;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode as Middleware;
 
-
-class StartSurveyIfAuthenticated extends Middleware
+class StartSurveyIfAuthenticated
 {
     /**
      * Handle an incoming request.
